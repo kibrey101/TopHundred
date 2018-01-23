@@ -44,10 +44,14 @@ namespace TopHundred
             using (var scope = app.ApplicationServices.CreateScope())
             {
                 var seeder = scope.ServiceProvider.GetService<Seed>();
-                seeder.SeedDatabase().Wait();
+                //seeder.SeedDatabase().Wait();
             }
 
-            app.UseMvc();
+            app.UseMvc(cfg =>
+            {
+                cfg.MapRoute("default",
+                    "{controller}/{action}/{id?}", new {controller = "App", action = "Index"});
+            });
         }
     }
 }

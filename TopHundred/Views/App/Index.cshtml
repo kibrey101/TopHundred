@@ -1,0 +1,16 @@
+﻿@model IEnumerable<TopHundred.Entities.IcoItem>
+@{
+    ViewBag.Title = "Ico Index";
+}
+
+<h2>@ViewBag.Items</h2>
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="row">
+        @Html.DisplayFor(modelItem => item.Name)
+    </div>
+    }
+</div>
+
+
