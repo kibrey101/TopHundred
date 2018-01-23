@@ -19,7 +19,12 @@ namespace TopHundred.Controllers
         }
         public async Task<IActionResult> Index()
         {           
-            return View(await _context.IcoItems.ToListAsync());
+            return View(await _context.IcoItems.OrderByDescending(a => a.StartTime).ToListAsync());
+        }
+
+        public IActionResult Upcoming()
+        {
+            return View();
         }
     }
 }

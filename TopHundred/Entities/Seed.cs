@@ -20,11 +20,14 @@ namespace TopHundred.Entities
         public  async Task SeedDatabase()
         {
 
-            var user = await _manager.FindByEmailAsync("kib@gmail.com") ?? 
-                       new Customer
+            var user = await _manager.FindByEmailAsync("kib@gmail.com");
+            if (user != null) return;
+
+            user =  new Customer
                        {
                            FirstName = "Kbreab", LastName = "Tsegai", UserName = "kib@gmail.com", Email = "kib@gmail.com"
                        };
+
             var result = await _manager.CreateAsync(user);
             if (!result.Succeeded) throw new InvalidOperationException("failed to create user");
             if (_context.IcoItems.Any()) return;
@@ -52,7 +55,7 @@ namespace TopHundred.Entities
                     Symbol = "XRP",
                     Icon = "XRP",
                     Status = "Active",
-                    StartTime = DateTime.Today,
+                    StartTime = DateTime.Today.AddDays(-5),
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user
@@ -65,7 +68,7 @@ namespace TopHundred.Entities
                     Symbol = "ETH",
                     Icon = "EEE",
                     Status = "Active",
-                    StartTime = DateTime.Today,
+                    StartTime = DateTime.Today.AddDays(-10),
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user

@@ -44,7 +44,7 @@ namespace TopHundred
             using (var scope = app.ApplicationServices.CreateScope())
             {
                 var seeder = scope.ServiceProvider.GetService<Seed>();
-                //seeder.SeedDatabase().Wait();
+                seeder.SeedDatabase().Wait();
             }
 
             app.UseMvc(cfg =>
