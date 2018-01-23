@@ -38,6 +38,7 @@ namespace TopHundred
                 app.UseExceptionHandler();
             }
 
+            app.UseStaticFiles();
             app.UseAuthentication();
 
             using (var scope = app.ApplicationServices.CreateScope())
@@ -45,6 +46,7 @@ namespace TopHundred
                 var seeder = scope.ServiceProvider.GetService<Seed>();
                 seeder.SeedDatabase().Wait();
             }
+
             app.UseMvc();
         }
     }
