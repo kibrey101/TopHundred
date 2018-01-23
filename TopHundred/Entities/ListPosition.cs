@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace TopHundred.Entities
 {
@@ -7,7 +9,10 @@ namespace TopHundred.Entities
     {
         [Key]
         public Guid Id { get; set; }
+
+        [ForeignKey("IcoItemId")]
         public IcoItem IcoItem { get; set; }
+        public Guid IcoItemId { get; set; }
         [Required]
         public int PositionValue { get; set; }
         [Required]
