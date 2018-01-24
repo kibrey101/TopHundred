@@ -11,9 +11,10 @@ using TopHundred.Entities;
 namespace TopHundred.Migrations
 {
     [DbContext(typeof(IcoListContext))]
-    partial class IcoListContextModelSnapshot : ModelSnapshot
+    [Migration("20180124085704_IcoListLinks")]
+    partial class IcoListLinks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -244,7 +245,7 @@ namespace TopHundred.Migrations
 
                     b.HasIndex("IcoItemId");
 
-                    b.ToTable("IcoLinks");
+                    b.ToTable("IcoLink");
                 });
 
             modelBuilder.Entity("TopHundred.Entities.ListPosition", b =>
