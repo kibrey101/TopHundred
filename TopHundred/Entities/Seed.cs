@@ -156,6 +156,123 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Miota",
+                    Description = "tangle network",
+                    Symbol = "MIOTA",
+                    Icon = "MMM",
+                    Status = "Active",
+                    StartTime = DateTime.Today,
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Ripple",
+                    Description = "micro transactions",
+                    Symbol = "XRP",
+                    Icon = "XRP",
+                    Status = "Active",
+                    StartTime = DateTime.Today.AddDays(-5),
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "BITCOIN",
+                    Description = "FIRST COIN",
+                    Symbol = "BCN",
+                    Icon = "EEE",
+                    Status = "Active",
+                    StartTime = DateTime.Today.AddDays(-10),
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "BYTECOIN",
+                    Description = "tangle network",
+                    Symbol = "BYte",
+                    Icon = "MMM",
+                    Status = "Active",
+                    StartTime = DateTime.Today,
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "DODGE COIN",
+                    Description = "micro transactions",
+                    Symbol = "DGG",
+                    Icon = "XRP",
+                    Status = "Active",
+                    StartTime = DateTime.Today.AddDays(-5),
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Ethereum",
+                    Description = "Ico platform",
+                    Symbol = "ETH",
+                    Icon = "EEE",
+                    Status = "Active",
+                    StartTime = DateTime.Today.AddDays(-10),
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "BYTECOIN",
+                    Description = "tangle network",
+                    Symbol = "BYte",
+                    Icon = "MMM",
+                    Status = "Active",
+                    StartTime = DateTime.Today,
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "DODGE COIN",
+                    Description = "micro transactions",
+                    Symbol = "DGG",
+                    Icon = "XRP",
+                    Status = "Active",
+                    StartTime = DateTime.Today.AddDays(-5),
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
+                },
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Ethereum",
+                    Description = "Ico platform",
+                    Symbol = "ETH",
+                    Icon = "EEE",
+                    Status = "Active",
+                    StartTime = DateTime.Today.AddDays(-10),
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user
                 }
 
             };
