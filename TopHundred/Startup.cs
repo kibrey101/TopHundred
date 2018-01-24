@@ -50,7 +50,7 @@ namespace TopHundred
             app.UseMvc(cfg =>
             {
                 cfg.MapRoute("default",
-                    "{controller}/{action}/{id?}", new {controller = "IcosList", action = "Index"});
+                    "{controller}/{action}/{id?}", new {controller = "App", action = "Index"});
             });
         }
     }

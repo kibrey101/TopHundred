@@ -9,11 +9,11 @@ using TopHundred.Entities;
 
 namespace TopHundred.Controllers
 {
-    public class IcosListController : Controller
+    public class AppController : Controller
     {
         private IcoListContext _context;
 
-        public IcosListController(IcoListContext context)
+        public AppController(IcoListContext context)
         {
             _context = context;
         }
@@ -21,7 +21,7 @@ namespace TopHundred.Controllers
         {           
             return View(await _context.IcoItems.OrderByDescending(a => a.StartTime).Include(a => a.Customer).ToListAsync());
         }
-        [HttpGet("/upcoming")]
+
         public IActionResult Upcoming()
         {
             return View();

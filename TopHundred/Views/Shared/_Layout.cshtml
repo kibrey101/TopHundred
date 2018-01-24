@@ -14,29 +14,18 @@
             <a asp-controller="app" asp-action="index" class="brand-logo"><i class="fa fa-coffee"></i></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
             <ul class="hide-on-med-and-down menu" style="margin-left: 100px;">
-                <li class="text-dark"><a asp-controller="icoslist" asp-action="index">Home</a></li>
-                <li><a asp-controller="icoslist" asp-action="upcoming">Upcoming</a></li>
-                <li><a asp-controller="icoslist" asp-action="Contact">Contact Us</a></li>
-                <li><a asp-controller="icoslist" asp-action="About">About Us</a></li>               
-                
+                <li class="text-dark"><a asp-controller="app" asp-action="index">Home</a></li>
+                <li><a asp-controller="app" asp-action="Upcoming">Upcoming</a></li>
+                <li><a asp-controller="App" asp-action="Contact">Contact Us</a></li>
+                <li><a asp-controller="App" asp-action="About">About Us</a></li>
+                <li class="right-align"><a asp-controller="Account" asp-action="Login">Login</a></li>
             </ul>
-            <ul class="right">
-                <li class="text-dark">
-                    <div class="form-group">
-                        <input type="search" name="Search" class="rounded border" style="border-color: black;" />
-                    </div>
-                </li>
-                <li><a asp-controller="Account" asp-action="Login" class="text-dark">Login</a></li>
-                <li><a asp-controller="Account" asp-action="Login" class="text-dark">Login</a></li>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a asp-controller="app" asp-action="Index">Home</a></li>
+                <li><a asp-controller="app" asp-action="upcoming">Upcoming</a></li>
+                <li><a asp-controller="App" asp-action="Contact">Contact Us</a></li>
+                <li><a asp-controller="App" asp-action="About">About Us</a></li>
             </ul>
-            <div class="side-nav" id="mobile-demo">
-                <ul  >
-                    <li><a asp-controller="icoslist" asp-action="Index">Home</a></li>
-                    <li><a asp-controller="icoslist" asp-action="upcoming">Upcoming</a></li>
-                    <li><a asp-controller="icoslist" asp-action="Contact">Contact Us</a></li>
-                    <li><a asp-controller="icoslist" asp-action="About">About Us</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
     <main class="container">
