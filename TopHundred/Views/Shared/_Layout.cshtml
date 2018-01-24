@@ -9,12 +9,12 @@
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <nav>
+    <nav class="grey lighten-3">
         <div class="nav-wrapper container">
             <a asp-controller="app" asp-action="index" class="brand-logo"><i class="fa fa-coffee"></i></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
-            <ul class=" hide-on-med-and-down" style="margin-left: 100px;">
-                <li><a asp-controller="app" asp-action="index">Home</a></li>
+            <ul class="hide-on-med-and-down menu" style="margin-left: 100px;">
+                <li class="text-dark"><a asp-controller="app" asp-action="index">Home</a></li>
                 <li><a asp-controller="app" asp-action="Upcoming">Upcoming</a></li>
                 <li><a asp-controller="App" asp-action="Contact">Contact Us</a></li>
                 <li><a asp-controller="App" asp-action="About">About Us</a></li>
@@ -31,7 +31,7 @@
     <main class="container">
         @RenderBody()
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer grey lighten-3">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">

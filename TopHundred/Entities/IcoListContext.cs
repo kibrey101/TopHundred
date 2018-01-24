@@ -11,11 +11,12 @@ namespace TopHundred.Entities
     {
         public IcoListContext(DbContextOptions options) : base(options)
         {
-            Database.EnsureCreated();
+            Database.Migrate();
         }
 
         public DbSet<IcoItem> IcoItems { get; set; }
         public DbSet<ListPosition> ListPositions { get; set; }
-        public DbSet<PositionRequest> PositionRequests { get; set; }    
+        public DbSet<PositionRequest> PositionRequests { get; set; }
+        public DbSet<IcoLink> IcoLinks { get; set; }
     }
 }

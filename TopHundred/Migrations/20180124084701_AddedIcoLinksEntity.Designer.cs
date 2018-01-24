@@ -11,9 +11,10 @@ using TopHundred.Entities;
 namespace TopHundred.Migrations
 {
     [DbContext(typeof(IcoListContext))]
-    partial class IcoListContextModelSnapshot : ModelSnapshot
+    [Migration("20180124084701_AddedIcoLinksEntity")]
+    partial class AddedIcoLinksEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -232,7 +233,7 @@ namespace TopHundred.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("IcoItemId");
+                    b.Property<Guid?>("IcoItemId");
 
                     b.Property<string>("Link");
 
@@ -244,7 +245,7 @@ namespace TopHundred.Migrations
 
                     b.HasIndex("IcoItemId");
 
-                    b.ToTable("IcoLinks");
+                    b.ToTable("IcoLink");
                 });
 
             modelBuilder.Entity("TopHundred.Entities.ListPosition", b =>
@@ -354,10 +355,9 @@ namespace TopHundred.Migrations
 
             modelBuilder.Entity("TopHundred.Entities.IcoLink", b =>
                 {
-                    b.HasOne("TopHundred.Entities.IcoItem", "IcoItem")
+                    b.HasOne("TopHundred.Entities.IcoItem")
                         .WithMany("IcoLinks")
-                        .HasForeignKey("IcoItemId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("IcoItemId");
                 });
 
             modelBuilder.Entity("TopHundred.Entities.ListPosition", b =>

@@ -5,15 +5,26 @@
 
 <h2>@ViewBag.Items</h2>
 <div class="row">
-    @foreach (var item in Model)
-    {
-        <div class="col-lg-6 card text-center" style="padding: 30px;">
-            @Html.DisplayFor(modelItem => item.Name)
-        </div>
-        <div class="col-lg-6 card text-center" style="padding: 30px;">
-            @Html.DisplayFor(modelItem => item.StartTime)
-        </div>
-    }
+    <table class="striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Symblo</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><a href="#">@item.Name</a></td>
+                <td>@item.Symbol</td>
+                <td>@item.StartTime</td>
+                <td>@item.EndTime</td>
+            </tr>
+        }
+        </tbody>
+    </table>
 </div>
-
 
