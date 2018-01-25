@@ -23,7 +23,7 @@ namespace TopHundred.Controllers
                 .ToListAsync();
             return View(items);
         }
-        [HttpGet("/upcoming")]
+
         public IActionResult Upcoming()
         {
             return View();
