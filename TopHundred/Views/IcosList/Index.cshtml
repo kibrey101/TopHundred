@@ -1,29 +1,48 @@
 ﻿@model IEnumerable<IcoItem>
 @{
-    ViewBag.Title = "Most Popular";
+    ViewBag.Title = "Ico Index";
 }
-<div class="row">
-    <h2>@ViewBag.Title</h2>
-    <table class="striped centered">
+
+<h2>Top ICOS</h2>
+
+<ul class="collection">
+    @foreach (var item in Model)
+    {
+        <li class="collection-item avatar">
+            <i class="material-icons fa fa-pencil fa-2x"></i>
+            <span class="title">@item.ListPosition.PositionValue @item.Name (@item.Symbol)</span>
+            <p>
+                @item.Symbol <br>
+                @item.Description @item.Description @item.Description @item.Description @item.Description @item.Description
+            </p>
+
+            <a href="#" class="secondary-content"><i class="material-icons">@item.StartTime.ToString("dd.MM.yyyy") - @item.EndTime.ToString("dd.MM.yyyy")</i></a>
+        </li>
+    }    
+</ul>
+
+@*<div class="row">
+    <table class="striped">
         <thead>
-            <tr>
-                <th class="text-lg-left">Name</th>
-                <th>Symblo</th>
-                <th>Start Time</th>
-                <th class="centered">End Time</th>
-            </tr>
+        <tr>
+            <th>Name</th>
+            <th>Symblo</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td class="text-lg-left"><a href="#">@item.Name</a></td>
-                    <td>@item.Symbol</td>
-                    <td>@item.StartTime</td>
-                    <td class="centered">@item.EndTime</td>
-                </tr>
-            }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><a href="#">@item.Name</a></td>
+                <td>@item.Symbol</td>
+                <td>@item.StartTime</td>
+                <td>@item.EndTime</td>
+            </tr>
+        }
         </tbody>
-    </table>
-</div>
+    </table>   
+</div>*@
+
 

@@ -18,8 +18,10 @@ namespace TopHundred.Controllers
             _context = context;
         }
         public async Task<IActionResult> Index()
-        {           
-            return View(await _context.IcoItems.OrderByDescending(a => a.StartTime).Include(a => a.Customer).ToListAsync());
+        {
+            var items = await _context.IcoItems.Include(a => a.ListPosition).OrderBy(a => a.ListPosition.PositionValue)
+                .ToListAsync();
+            return View(items);
         }
         [HttpGet("/upcoming")]
         public IActionResult Upcoming()
