@@ -11,7 +11,7 @@ namespace TopHundred.Controllers
 {
     public class IcosListController : Controller
     {
-        private IcoListContext _context;
+        private readonly IcoListContext _context;
 
         public IcosListController(IcoListContext context)
         {
@@ -23,7 +23,14 @@ namespace TopHundred.Controllers
                 .ToListAsync();
             return View(items);
         }
+        [HttpGet("detail")]
+        public IActionResult IcoDetail(Guid id)
+        {
+            var item = _context.IcoItems.Include(a => a.ListPosition).FirstOrDefault(a => a.Id == id);
+            return View(item);
+        }
 
+        [HttpGet("upcoming")]
         public IActionResult Upcoming()
         {
             return View();
