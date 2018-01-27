@@ -58,7 +58,7 @@ namespace TopHundred.Entities
                         PositionValue = 1,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Taken,
                         Price = 12
                     }
                 },
@@ -80,7 +80,7 @@ namespace TopHundred.Entities
                         PositionValue = 2,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Taken,
                         Price = 12
                     }
                 },
@@ -102,7 +102,7 @@ namespace TopHundred.Entities
                         PositionValue = 3,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Taken,
                         Price = 12
                     }
                 },
@@ -124,7 +124,7 @@ namespace TopHundred.Entities
                         PositionValue = 4,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Taken,
                         Price = 12
                     }
                 },
@@ -146,7 +146,7 @@ namespace TopHundred.Entities
                         PositionValue = 5,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Taken,
                         Price = 12
                     }
                 },
@@ -168,7 +168,7 @@ namespace TopHundred.Entities
                         PositionValue = 6,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Taken,
                         Price = 12
                     }
                 },
@@ -190,7 +190,7 @@ namespace TopHundred.Entities
                         PositionValue = 7,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Taken,
                         Price = 12
                     }
                 },
@@ -212,7 +212,7 @@ namespace TopHundred.Entities
                         PositionValue = 8,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Taken,
                         Price = 12
                     }
                 },
@@ -234,7 +234,7 @@ namespace TopHundred.Entities
                         PositionValue = 9,
                         PurchaseTime = DateTime.Now,
                         ExpiryTime = DateTime.Now.AddDays(12),
-                        Status = "Active",
+                        Status = ListPositionStatus.Available,
                         Price = 12
                     }
                 }

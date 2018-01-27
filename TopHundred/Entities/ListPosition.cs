@@ -5,6 +5,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace TopHundred.Entities
 {
+    public enum ListPositionStatus
+    {
+        Available = 0,
+        Taken = 2
+    };
     public class ListPosition
     {
         [Key]
@@ -20,7 +25,7 @@ namespace TopHundred.Entities
         [Required]
         public DateTime ExpiryTime { get; set; }
         [Required, MaxLength(50)]
-        public string Status { get; set; }
+        public ListPositionStatus Status { get; set; }
         [Required]
         public decimal Price { get; set; }
     }

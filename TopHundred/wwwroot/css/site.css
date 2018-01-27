@@ -3,13 +3,15 @@ body {
     display: flex;
     min-height: 200vh;
     flex-direction: column;
-    background-color: #fffafa;
+    
 }
 
 main {
     flex: 1 0 auto;
 }
-
-.menu li a {
-    color: black; text-decoration: none;
+.menu {
+    background-image: linear-gradient(to right top, #6e1246 0%, #6e1246 100%);
 }
+    .menu li a {
+        text-decoration: none;
+    }
