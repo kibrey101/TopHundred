@@ -5,51 +5,46 @@
 
 <h2>Top ICOS</h2>
 
-<ul class="collection" style="border: none;">
-    @foreach (var item in Model)
-    {
-        <li class="collection-item avatar card" style="margin-bottom: 3px;">
-            <div class="row">
-                <div class="col col-sm-12 col-md-4">
-                    <i class="material-icons fa fa-pencil fa-2x"></i>
-                    <span class="title">@item.ListPosition.PositionValue @item.Name (@item.Symbol)</span>
-                    <a asp-controller="IcosList" asp-action="IcoDetail" asp-route-id="@item.Id">@item.Name</a>
-                </div>
-                <div class="col col-sm-12 col-md-4">
-                    <a href="#" class="secondary-content"><i class="material-icons">@item.StartTime.ToString("dd.MM.yyyy") - @item.EndTime.ToString("dd.MM.yyyy")</i></a>
-                </div>
-                <p>
-                    @item.Description
-                </p>
 
+@foreach (var item in Model)
+{
+    <div class="row card-panel">
+        <div class="col col-md-3">
+            @item.ListPosition.PositionValue . <span> </span>
+            <a asp-route-id="@item.Id" asp-controller="IcosList" asp-action="IcoDetail">@item.Name</a>
+        </div>
+        <div class="col col-md-2">
+            @item.Status
+        </div>
+        <div class="col col-md-3">
+            @item.StartTime.ToString("dd.MM.yyyy") - @item.EndTime.ToString("dd.MM.yyyy")
+        </div>
+    </div>
+}
 
-            </div>
-        </li>
-    }    
-</ul>
 
 @*<div class="row">
-    <table class="striped">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Symblo</th>
-            <th>Start Time</th>
-            <th>End Time</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var item in Model)
-        {
+        <table class="striped">
+            <thead>
             <tr>
-                <td><a href="#">@item.Name</a></td>
-                <td>@item.Symbol</td>
-                <td>@item.StartTime</td>
-                <td>@item.EndTime</td>
+                <th>Name</th>
+                <th>Symblo</th>
+                <th>Start Time</th>
+                <th>End Time</th>
             </tr>
-        }
-        </tbody>
-    </table>   
-</div>*@
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><a href="#">@item.Name</a></td>
+                    <td>@item.Symbol</td>
+                    <td>@item.StartTime</td>
+                    <td>@item.EndTime</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>*@
 
 
