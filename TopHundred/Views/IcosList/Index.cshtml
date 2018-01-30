@@ -17,11 +17,12 @@
         </a>
     </div>
     <div class="col col-5 col-md-2">
-        @item.Status
+        @item.TotalTokenCount.ToString("##,###")
     </div>
     <div class="col col-5 col-md-2">
-        @item.TotalTokenCount
+        @item.Status
     </div>
+
     <div class="col col-md-3">
         <i class="fa fa-clock-o" style="color: green; font-size: 20px;"></i>
         @item.StartTime.ToString("dd.MM.yyyy") - @item.EndTime.ToString("dd.MM.yyyy")
