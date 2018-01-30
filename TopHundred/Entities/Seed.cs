@@ -61,6 +61,14 @@ namespace TopHundred.Entities
                         ExpiryTime = DateTime.Now.AddDays(12),
                         Status = ListPositionStatus.Taken,
                         Price = 12
+                    },
+                    IcoLinks = new List<IcoLink>
+                    {
+                        new IcoLink
+                        {
+                            Id = Guid.NewGuid(),
+
+                        }
                     }
                 },
                 new IcoItem
