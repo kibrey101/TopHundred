@@ -29,6 +29,7 @@ namespace TopHundred.Entities
         public string WhitePaper { get; set; }
         public Customer Customer { get; set; }
         public ListPosition ListPosition { get; set; }
+        public int TotalTokenCount { get; set; }    
         public IEnumerable<IcoLink> IcoLinks { get; set; } = new List<IcoLink>();
 
     }

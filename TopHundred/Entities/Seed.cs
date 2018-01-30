@@ -37,7 +37,7 @@ namespace TopHundred.Entities
          
             _context.IcoItems.RemoveRange(_context.IcoItems);
             _context.SaveChanges();
-
+            
             var icoList = new List<IcoItem>
             {
                 new IcoItem
@@ -52,6 +52,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 1200000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
@@ -74,6 +75,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 7000000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
@@ -96,6 +98,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 3300000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
@@ -118,6 +121,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 9800000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
@@ -140,6 +144,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 1200000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
@@ -162,6 +167,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 3200000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
@@ -184,6 +190,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 77200000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
@@ -206,6 +213,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 1200000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
@@ -228,6 +236,7 @@ namespace TopHundred.Entities
                     EndTime = DateTime.Today.AddDays(30),
                     WhitePaper = "emptyfile",
                     Customer = user,
+                    TotalTokenCount = 5500000,
                     ListPosition =  new ListPosition
                     {
                         Id = Guid.NewGuid(),
