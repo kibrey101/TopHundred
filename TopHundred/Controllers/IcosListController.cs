@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TopHundred.Entities;
@@ -32,6 +33,13 @@ namespace TopHundred.Controllers
 
         [HttpGet("upcoming")]
         public IActionResult Upcoming()
+        {
+            return View();
+        }
+
+        //[Authorize]
+        [HttpGet("submit")]
+        public IActionResult SubmitIco()
         {
             return View();
         }

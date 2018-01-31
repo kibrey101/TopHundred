@@ -16,15 +16,17 @@
             <ul class="hide-on-med-and-down menu" style="font-weight: bold;">
                 <li class="text-dark"><a asp-controller="IcosList" asp-action="index">HOME</a></li>
                 <li><a asp-controller="icoslist" asp-action="Upcoming">UPCOMING</a></li>
-                <li><a asp-controller="icoslist" asp-action="Contact">CONTACT US</a></li>
-                <li><a asp-controller="icoslist" asp-action="About">ABOUT US</a></li>
-                <li class="right-align"><a asp-controller="Account" asp-action="Login">LOGIN</a></li>
+                <li><a asp-controller="icoslist" asp-action="SubmitIco">SUBMIT ICO</a></li>
+                <li><a asp-controller="Account" asp-action="ContactUs">CONTACT US</a></li>
+                <li><a asp-controller="Account" asp-action="AboutUs">ABOUT US</a></li>
+                <li><a asp-controller="Account" asp-action="Login">LOGIN</a></li>
             </ul>
             <ul class="side-nav menu" id="mobile-demo">
                 <li><a asp-controller="icoslist" asp-action="Index">Home</a></li>
                 <li><a asp-controller="icoslist" asp-action="upcoming">Upcoming</a></li>
-                <li><a asp-controller="icoslist" asp-action="Contact">Contact Us</a></li>
-                <li><a asp-controller="icoslist" asp-action="About">About Us</a></li>
+                <li><a asp-controller="Account" asp-action="ContactUs">CONTACT US</a></li>
+                <li><a asp-controller="Account" asp-action="AboutUs">ABOUT US</a></li>
+                <li><a asp-controller="Account" asp-action="Login">LOGIN</a></li>
             </ul>
         </div>
     </nav>
