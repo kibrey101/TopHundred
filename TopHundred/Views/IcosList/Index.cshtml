@@ -3,33 +3,21 @@
     ViewBag.Title = "Ico Index";
 }
 
-<h2>Top ICOS</h2>
+    <form class="form-row" style="margin: 10px 0 15px 0;">
+        <div class="offset-md-6 col-md-6">
+            <div class="input-group">
 
+                <input type="search" class="form-control" placeholder="Search...">
+                <button class="input-group-append" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </form>
 
-@*@foreach (var item in Model)
-{
-<div class="row card-panel">
-
-    <div class="col col-6 col-md-3">
-        <i class="fa fa-star" style="color: blue;"> @item.ListPosition.PositionValue </i>
-        <a asp-route-id="@item.Id" asp-controller="IcosList" asp-action="IcoDetail">
-            @item.Name (@item.Symbol)
-        </a>
-    </div>
-    <div class="col col-5 col-md-2">
-        @item.TotalTokenCount.ToString("##,###") @item.Symbol
-    </div>
-    <div class="col col-5 col-md-2">
-        @item.Status
-    </div>
-
-    <div class="col col-md-3">
-        <i class="fa fa-clock-o" style="color: green; font-size: 20px;"></i>
-        @item.StartTime.ToString("dd.MM.yyyy") - @item.EndTime.ToString("dd.MM.yyyy")
-    </div>
+<div class="card-panel" style="margin: 10px 0 25px 0;">
+    <h2>TOP ICOS</h2>
 </div>
-}*@
-<table class="striped">
+
+<table class="table table-striped">
     <thead>
         <tr>
             <th>#</th>
@@ -41,17 +29,17 @@
     </thead>
     @foreach (var item in Model)
     {
-    <tr>
-        <td> @item.ListPosition.PositionValue</td>
-        <td>
-            <a asp-route-id="@item.Id" asp-controller="IcosList" asp-action="IcoDetail">
-                @item.Name (@item.Symbol)
-            </a>
-        </td>
-        <td>@item.TotalTokenCount.ToString("##,###") @item.Symbol</td>
-        <td>@item.Status</td>
-        <td class="text-center">@item.StartTime.ToString("dd.MM.yyyy") - @item.EndTime.ToString("dd.MM.yyyy")</td>
-    </tr>
+        <tr>
+            <td> @item.ListPosition.PositionValue</td>
+            <td>
+                <a asp-action="IcoDetail" asp-controller="IcosList" asp-route-id="@item.Id" target="_blank">
+                    @item.Name (@item.Symbol)
+                </a>
+            </td>
+            <td>@item.TotalTokenCount.ToString("##,###") @item.Symbol</td>
+            <td>@item.Status</td>
+            <td class="text-center">@item.StartTime.ToString("dd.MM.yyyy") - @item.EndTime.ToString("dd.MM.yyyy")</td>
+        </tr>
     }
 
 </table>

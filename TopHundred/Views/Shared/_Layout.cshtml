@@ -4,32 +4,61 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/lib/materialize/dist/css/materialize.min.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="menu" style=" background-color: #fefefe;">
-        <div class="nav-wrapper container">
-            <a asp-controller="icoslist" asp-action="index" class="brand-logo right-align" style="margin-top: 10px;"><i class="fa fa-tick"></i></a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars fa-2x"></i></a>
-            <ul class="hide-on-med-and-down menu" style="font-weight: bold;">
-                <li class="text-dark"><a asp-controller="IcosList" asp-action="index">HOME</a></li>
-                <li><a asp-controller="icoslist" asp-action="Upcoming">UPCOMING</a></li>
-                <li><a asp-controller="icoslist" asp-action="SubmitIco">SUBMIT ICO</a></li>
-                <li><a asp-controller="Account" asp-action="ContactUs">CONTACT US</a></li>
-                <li><a asp-controller="Account" asp-action="AboutUs">ABOUT US</a></li>
-                <li><a asp-controller="Account" asp-action="Login">LOGIN</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark card-panel sticky-top">
+        <a class="navbar-brand" href="#"><i class="fa fa-pencil"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a asp-controller="IcosList" asp-action="index" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="IcosList" asp-action="Upcoming" class="nav-link">Upcoming</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="IcosList" asp-action="SubmitIco" class="nav-link">Submit ICO</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Account" asp-action="ContactUs" class="nav-link">Contact US</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Account" asp-action="AboutUs" class="nav-link">About US</a>
+                </li>                
+                <li class="nav-item">
+                    <a asp-controller="Account" asp-action="Login" class="nav-link">Login</a>
+                </li>
             </ul>
-            <ul class="side-nav menu" id="mobile-demo">
-                <li><a asp-controller="icoslist" asp-action="Index">Home</a></li>
-                <li><a asp-controller="icoslist" asp-action="upcoming">Upcoming</a></li>
-                <li><a asp-controller="Account" asp-action="ContactUs">CONTACT US</a></li>
-                <li><a asp-controller="Account" asp-action="AboutUs">ABOUT US</a></li>
-                <li><a asp-controller="Account" asp-action="Login">LOGIN</a></li>
-            </ul>
+
         </div>
     </nav>
+    @*<nav class="menu" style=" background-color: #fefefe;">
+            <div class="nav-wrapper container">
+                <a asp-controller="icoslist" asp-action="index" class="brand-logo right-align" style="margin-top: 10px;"><i class="fa fa-tick"></i></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars fa-2x"></i></a>
+                <ul class="hide-on-med-and-down menu" style="font-weight: bold;">
+                    <li class="text-dark"><a asp-controller="IcosList" asp-action="index">HOME</a></li>
+                    <li><a asp-controller="icoslist" asp-action="Upcoming">UPCOMING</a></li>
+                    <li><a asp-controller="icoslist" asp-action="SubmitIco">SUBMIT ICO</a></li>
+                    <li><a asp-controller="Account" asp-action="ContactUs">CONTACT US</a></li>
+                    <li><a asp-controller="Account" asp-action="AboutUs">ABOUT US</a></li>
+                    <li><a asp-controller="Account" asp-action="Login">LOGIN</a></li>
+                </ul>
+                <ul class="side-nav menu" id="mobile-demo">
+                    <li><a asp-controller="icoslist" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="icoslist" asp-action="upcoming">Upcoming</a></li>
+                    <li><a asp-controller="Account" asp-action="ContactUs">CONTACT US</a></li>
+                    <li><a asp-controller="Account" asp-action="AboutUs">ABOUT US</a></li>
+                    <li><a asp-controller="Account" asp-action="Login">LOGIN</a></li>
+                </ul>
+            </div>
+        </nav>*@
     <main class="container">
         @RenderBody()
     </main>
@@ -44,7 +73,7 @@
                     <h5 class="white-text">Links</h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -57,7 +86,7 @@
         </div>
     </footer>
     <script src="~/lib/jQuery/dist/jquery.min.js"></script>
-    <script src="~/lib/materialize/dist/js/materialize.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/js/mainApp.js"></script>
 </body>
 </html>
