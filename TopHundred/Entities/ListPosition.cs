@@ -1,15 +1,14 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace TopHundred.Entities
 {
     public enum ListPositionStatus
     {
-        Available = 0,
-        Taken = 2
-    };
+        Available = 0, Reserved, Taken
+    }
+
     public class ListPosition
     {
         [Key]

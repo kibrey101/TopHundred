@@ -3,26 +3,84 @@
     ViewBag.Title = "Ico Detail";
 }
 
-<h2>Top ICOS</h2>
 
-
-<div class="row">
-    <div class="col col-sm-12 col-md-4">
-        <i class="material-icons fa fa-pencil fa-2x"></i>
-        <span class="title">@Model.ListPosition.PositionValue @Model.Name (@Model.Symbol)</span>
-        <a asp-controller="IcosList" asp-action="IcoDetail" asp-route-id="@Model.Id">@Model.Name</a>
+<div class="row" style="margin-top: 100px">
+    <div class="col col-6 col-md-2">
+        <img src="~/img/mario.jpg" class="img-fluid card" alt="" /><br />
     </div>
-    <div class="col col-sm-12 col-md-4">
-        <i class="material-icons fa fa-pencil fa-2x"></i>
-        <span class="title">@Model.ListPosition.PositionValue @Model.Name (@Model.Symbol)</span>
-    </div>
-    <div class="col col-sm-12 col-md-4">
-        <a href="#" class="secondary-content"><i class="material-icons">@Model.StartTime.ToString("dd.MM.yyyy") - @Model.EndTime.ToString("dd.MM.yyyy")</i></a>
-    </div>
-    <p>
-        @Model.Description
-    </p>
-
-
+    <div class="col col-md-9"><h2 style="color: #2f4f4f;">@Model.Name (@Model.Symbol)</h2></div>
 </div>
+<div class="row" style="margin-top: 40px;">
+    <div class="col col-9">
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-4">Status</div>
+                    <div class="col col-sm-4">@Model.Status</div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-4">Start Time</div>
+                    <div class="col col-sm-6">@Model.StartTime</div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-4">End Time</div>
+                    <div class="col col-sm-6">@Model.EndTime</div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-4">Token Count</div>
+                    <div class="col col-sm-6">@Model.TotalTokenCount.ToString("##,###") @Model.Symbol</div>
+        </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col col-sm-4">Links</div>
+                <div class="col col-sm-6">to be filled</div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col col-sm-4">Whitepaper</div>
+                <div class="col col-sm-6">@Model.WhitePaper</div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col col-sm-4">Description</div>
+                <div class="col col-sm-6">@Model.Description</div>
+            </div>
+        </li>
+        <li class="list-group-item"></li>
+        </ul>
+    </div>
+</div>
+<div class="row" style="margin-top: 100px;">
+    detailed content
+</div>
+@*<div class="row">
+        <div class="col col-sm-12 col-md-4">
+            <i class="material-icons fa fa-pencil fa-2x"></i>
+            <span class="title">@Model.ListPosition.PositionValue @Model.Name (@Model.Symbol)</span>
+            <a asp-controller="IcosList" asp-action="IcoDetail" asp-route-id="@Model.Id">@Model.Name</a>
+        </div>
+        <div class="col col-sm-12 col-md-4">
+            <i class="material-icons fa fa-pencil fa-2x"></i>
+            <span class="title">@Model.ListPosition.PositionValue @Model.Name (@Model.Symbol)</span>
+        </div>
+        <div class="col col-sm-12 col-md-4">
+            <a href="#" class="secondary-content"><i class="material-icons">@Model.StartTime.ToString("dd.MM.yyyy") - @Model.EndTime.ToString("dd.MM.yyyy")</i></a>
+        </div>
+        <p>
+            @Model.Description
+        </p>
+
+
+    </div>*@
 

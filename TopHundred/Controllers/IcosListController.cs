@@ -24,7 +24,7 @@ namespace TopHundred.Controllers
                 .ToListAsync();
             return View(items);
         }
-        [HttpGet("icoslist/{id}")]
+        [HttpGet("icos/{id}")]
         public IActionResult IcoDetail(Guid id)
         {
             var item = _context.IcoItems.Include(a => a.ListPosition).FirstOrDefault(a => a.Id == id);
@@ -40,6 +40,11 @@ namespace TopHundred.Controllers
         //[Authorize]
         [HttpGet("submit")]
         public IActionResult SubmitIco()
+        {
+            return View();
+        }
+
+        public IActionResult News()
         {
             return View();
         }
