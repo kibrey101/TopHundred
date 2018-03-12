@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark card-panel sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fa fa-amazon"></i></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
@@ -22,14 +22,14 @@
                         <a asp-controller="IcosList" asp-action="index" class="nav-link">Home <span class="sr-only">(current)</span></a>
                     </li>
                     @*<li class="nav-item">
-                    <a asp-controller="IcosList" asp-action="Upcoming" class="nav-link">Upcoming</a>
-                </li>*@
+                            <a asp-controller="IcosList" asp-action="Upcoming" class="nav-link">Upcoming</a>
+                        </li>*@
                     <li class="nav-item">
                         <a asp-controller="IcosList" asp-action="SubmitIco" class="nav-link">Submit ICO</a>
                     </li>
                     @*<li class="nav-item">
-                    <a asp-controller="IcosList" asp-action="News" class="nav-link">News</a>
-                </li>*@
+                            <a asp-controller="IcosList" asp-action="News" class="nav-link">News</a>
+                        </li>*@
                     <li class="nav-item">
                         <a asp-controller="Account" asp-action="ContactUs" class="nav-link">Contact us</a>
                     </li>
@@ -44,7 +44,7 @@
     <main class="container">
         @RenderBody()
     </main>
-    <footer class="page-footer grey lighten-3"  style="margin-top: 200px;">
+    <footer class="page-footer grey lighten-3" style="margin-top: 200px;">
         <div class="container">
             <div class="row">
                 <div class="col col-sm-12">
@@ -69,6 +69,7 @@
     </footer>
     <script src="~/lib/jQuery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    @RenderSection("scripts", false)
     <script src="~/js/mainApp.js"></script>
 </body>
 </html>

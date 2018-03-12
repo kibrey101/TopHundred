@@ -44,6 +44,14 @@ namespace TopHundred.Controllers
             return View();
         }
 
+        [HttpPost("submit")]
+        public IActionResult SubmitIco(IcoItem model)
+        {
+            if (!ModelState.IsValid) ;
+
+            return View();
+        }
+
         public IActionResult News()
         {
             return View();

@@ -1,17 +1,64 @@
-﻿
+﻿@model IcoItem
 @{
-    ViewData["Title"] = "SubmitIco";
+    ViewData["Title"] = "Submit an ICO";
+}
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 }
 
-<h2>SubmitIco</h2>
-<form>
-    <div class="form-group">
-        <label for="formGroupExampleInput">Example label</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-    </div>
-    <div class="form-group">
-        <label for="formGroupExampleInput2">Another label</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-    </div>
-</form>
+<div class="row" style="margin: 60px 0 0 0;">
+    <div class="col-12 col-md-10 offset-md-1">
+        <div class="modal-header">
+            <h2 class="text-center text-md-left" style="margin: 20px 0;">Submit ICO</h2>
+        </div>
+        <div class="row">
+            <div class="card-body">
+                <form class="" method="post">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group">
+                        <label asp-for="Name">Name</label>
+                        <input type="text" class="form-control" asp-for="Name" placeholder="ICO name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Status">Status</label>
+                        <select class="form-control" asp-for="Status">
+                            <option>Active</option>
+                            <option>TBD</option>
+                            <option>Sold Out</option>
+                        </select>
+                        <span asp-validation-for="Status"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="StartTime">Start Time</label>
+                        <input class="form-control" type="date" asp-for="StartTime" />
+                        <span asp-validation-for="StartTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EndTime">End Time</label>
+                        <input class="form-control" type="date" asp-for="EndTime" />
+                        <span asp-validation-for="EndTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="WhitePaper">Whitepaper link</label>
+                        <input type="text" class="form-control" asp-for="WhitePaper" placeholder="Whitepaper link">
+                        <span asp-validation-for="WhitePaper" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TotalTokenCount">Total token count</label>
+                        <input type="text" class="form-control" asp-for="TotalTokenCount" placeholder="Total token count">
+                        <span asp-validation-for="TotalTokenCount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description">Description</label>
+                        <textarea type="text" class="form-control" asp-for="Description" placeholder="ICO description" rows="3"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
 
+                    <button type="submit" class="btn btn-dark btn-block col-12 col-sm-3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

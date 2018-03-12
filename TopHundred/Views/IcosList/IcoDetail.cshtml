@@ -11,50 +11,50 @@
     <div class="col col-md-9"><h2 style="color: #2f4f4f;">@Model.Name (@Model.Symbol)</h2></div>
 </div>
 <div class="row" style="margin-top: 40px;">
-    <div class="col col-9">
+    <div class="col col-12 col-md-8">
 
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush" >
             <li class="list-group-item"></li>
             <li class="list-group-item">
                 <div class="row">
-                    <div class="col col-sm-4">Status</div>
-                    <div class="col col-sm-4">@Model.Status</div>
+                    <div class="col col-sm-6">Status</div>
+                    <div class="col col-sm-6" style="font-weight: bold;">@Model.Status</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="row">
-                    <div class="col col-sm-4">Start Time</div>
-                    <div class="col col-sm-6">@Model.StartTime</div>
+                    <div class="col col-sm-6">Start Time</div>
+                    <div class="col col-sm-6" style="font-weight: bold;">@Model.StartTime</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="row">
-                    <div class="col col-sm-4">End Time</div>
-                    <div class="col col-sm-6">@Model.EndTime</div>
+                    <div class="col col-sm-6">End Time</div>
+                    <div class="col col-sm-6" style="font-weight: bold;">@Model.EndTime</div>
                 </div>
             </li>
             <li class="list-group-item">
                 <div class="row">
-                    <div class="col col-sm-4">Token Count</div>
-                    <div class="col col-sm-6">@Model.TotalTokenCount.ToString("##,###") @Model.Symbol</div>
+                    <div class="col col-sm-6">Token Count</div>
+                    <div class="col col-sm-6" style="font-weight: bold;">@Model.TotalTokenCount.ToString("##,###") @Model.Symbol</div>
         </div>
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col col-sm-4">Links</div>
-                <div class="col col-sm-6">to be filled</div>
+                <div class="col col-sm-6">Links</div>
+                <div class="col col-sm-6" style="font-weight: bold;">to be filled</div>
             </div>
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col col-sm-4">Whitepaper</div>
-                <div class="col col-sm-6">@Model.WhitePaper</div>
+                <div class="col col-sm-6">Whitepaper</div>
+                <div class="col col-sm-6" style="font-weight: bold;">@Model.WhitePaper</div>
             </div>
         </li>
         <li class="list-group-item">
             <div class="row">
-                <div class="col col-sm-4">Description</div>
-                <div class="col col-sm-6">@Model.Description</div>
+                <div class="col col-sm-6">Description</div>
+                <div class="col col-sm-6" style="font-weight: bold;">@Model.Description</div>
             </div>
         </li>
         <li class="list-group-item"></li>
