@@ -1,48 +1,35 @@
-﻿
+﻿@model LoginViewModel
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Sign In";
+}
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 }
 
-<h2>Login</h2>
-
-<div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s6">
-                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-            </div>
+<div class="row" style="margin: 60px 0 0 0;">
+    <div class="col-8 col-md-6 offset-md-3">
+        <div class="modal-header">
+            <h2 class="text-center text-md-left" style="margin: 20px 0;">@ViewData["Title"]</h2>
         </div>
         <div class="row">
-            <div class="input-field col s12">
-                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                <label for="disabled">Disabled</label>
+            <div class="card-body">
+                <form class="" method="post">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group">
+                        <label asp-for="Username">User Name</label>
+                        <input type="text" class="form-control" asp-for="Username" placeholder="username">
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password">Password</label>
+                        <input type="text" class="form-control" asp-for="Password" placeholder="Password">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-dark btn-block col-12 col-sm-3">Submit</button>
+                </form>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                This is an inline input field:
-                <div class="input-field inline">
-                    <input id="email" type="email" class="validate">
-                    <label for="email" data-error="wrong" data-success="right">Email</label>
-                </div>
-            </div>
-        </div>
-    </form>
+    </div>
 </div>

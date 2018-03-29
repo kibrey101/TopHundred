@@ -22,6 +22,16 @@
                         <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                     <div class="form-group">
+                        <label asp-for="Icon">Icon</label>
+                        <input type="text" class="form-control" asp-for="Icon" placeholder="Icon link">
+                        <span asp-validation-for="Icon" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Symbol">Symbol</label>
+                        <input type="text" class="form-control" asp-for="Symbol" placeholder="ICO Symbol">
+                        <span asp-validation-for="Symbol" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
                         <label asp-for="Status">Status</label>
                         <select class="form-control" asp-for="Status">
                             <option>Active</option>
