@@ -37,7 +37,7 @@ namespace TopHundred.Controllers
             return View();
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet("submit")]
         public IActionResult SubmitIco()
         {

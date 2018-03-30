@@ -31,12 +31,13 @@ namespace TopHundred.Entities
                     Email = "kib@gmail.com"
                 };
 
-                var result = await _manager.CreateAsync(user);
+                var result = await _manager.CreateAsync(user, "Passw0rd!");
                 if (!result.Succeeded) throw new InvalidOperationException("failed to create user");
             }
-         
-            _context.IcoItems.RemoveRange(_context.IcoItems);
-            _context.SaveChanges();
+
+            if (_context.IcoItems.Any()) return;
+            //_context.IcoItems.RemoveRange(_context.IcoItems);
+            //_context.SaveChanges();
             
             var icoList = new List<IcoItem>
             {

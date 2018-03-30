@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<Customer> UserManager
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -10,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark card-panel sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fa fa-amazon"></i></a>
+            <a class="navbar-brand" asp-controller="IcosList" asp-action="index"><i class="fa fa-arrow-up"></i>TOP100</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
@@ -18,24 +20,36 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    @*<li class="nav-item active">
                         <a asp-controller="IcosList" asp-action="index" class="nav-link">Home <span class="sr-only">(current)</span></a>
-                    </li>
+                    </li>*@
                     @*<li class="nav-item">
                             <a asp-controller="IcosList" asp-action="Upcoming" class="nav-link">Upcoming</a>
                         </li>*@
                     <li class="nav-item">
                         <a asp-controller="IcosList" asp-action="SubmitIco" class="nav-link">Submit ICO</a>
                     </li>
-                    @*<li class="nav-item">
-                            <a asp-controller="IcosList" asp-action="News" class="nav-link">News</a>
-                        </li>*@
+                    <li class="nav-item">
+                        <a asp-controller="IcosList" asp-action="News" class="nav-link">News</a>
+                    </li>
                     <li class="nav-item">
                         <a asp-controller="Account" asp-action="ContactUs" class="nav-link">Contact us</a>
                     </li>
-                    <li class="nav-item">
-                        <a asp-controller="Account" asp-action="Login" class="nav-link">Login</a>
-                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a asp-controller="Account" asp-action="UserAccount" class="nav-link">@UserManager.GetUserName(User)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Account" asp-action="Logout" class="nav-link">Logout</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a asp-controller="Account" asp-action="Login" class="nav-link">Login</a>
+                        </li>
+                    }
                 </ul>
 
             </div>

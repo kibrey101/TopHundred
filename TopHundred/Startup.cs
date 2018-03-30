@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,9 +11,12 @@ namespace TopHundred
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IHostingEnvironment _env;
+
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
 
         public IConfiguration Configuration { get; set; }
@@ -24,12 +28,18 @@ namespace TopHundred
             services.AddTransient<Seed>();
             var connectionString = Configuration["connectionStrings:localConnection"];
             services.AddDbContext<IcoListContext>(cfg => { cfg.UseSqlServer(connectionString); });
-            services.AddMvc();
+            services.AddMvc(opt =>
+            {
+                if (_env.IsProduction())
+                {
+                    opt.Filters.Add(new RequireHttpsAttribute());
+                }
+            });
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
+            if (_env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
