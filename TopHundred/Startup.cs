@@ -26,7 +26,7 @@ namespace TopHundred
             services.AddIdentity<Customer, IdentityRole>(cfg => { cfg.User.RequireUniqueEmail = true; })
                 .AddEntityFrameworkStores<IcoListContext>();
             services.AddTransient<Seed>();
-            var connectionString = Configuration["connectionStrings:localConnection"];
+            var connectionString = Configuration["connectionStrings:DefaultConnection"];          
             services.AddDbContext<IcoListContext>(cfg => { cfg.UseSqlServer(connectionString); });
             services.AddMvc(opt =>
             {
