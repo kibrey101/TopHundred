@@ -35,7 +35,7 @@ namespace TopHundred.Entities
                 if (!result.Succeeded) throw new InvalidOperationException("failed to create user");
             }
 
-            //if (_context.IcoItems.Any()) return;
+            if (_context.IcoItems.Any()) return;
             _context.IcoItems.RemoveRange(_context.IcoItems);
             _context.SaveChanges();
 
