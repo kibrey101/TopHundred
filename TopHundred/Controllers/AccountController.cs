@@ -77,7 +77,7 @@ namespace TopHundred.Controllers
 
             if (user != null)
             {
-                user.IcoItems = _context.IcoItems.Where(i => i.Customer.Id == user.Id).Take(4).ToList();
+                user.IcoItems = _context.IcoItems.Where(i => i.Customer.Id == user.Id).ToList();
 
                 return View(user);
             }
