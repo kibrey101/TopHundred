@@ -38,7 +38,7 @@ namespace TopHundred.Entities
             if (_context.IcoItems.Any()) return;
             //_context.IcoItems.RemoveRange(_context.IcoItems);
             //_context.SaveChanges();
-            
+
             var icoList = new List<IcoItem>
             {
                 new IcoItem
@@ -46,7 +46,7 @@ namespace TopHundred.Entities
                     Id = Guid.NewGuid(),
                     Name = "Test ICO",
                     Description = "Test Description",
-                    Symbol = "TEST SYMBOL",
+                    Symbol = "TTT",
                     Icon = "TTT",
                     Status = "Active",
                     StartTime = DateTime.Today,
