@@ -41,6 +41,25 @@
                         <span asp-validation-for="Status"></span>
                     </div>
                     <div class="form-group">
+                        <label asp-for="Price">Price</label>
+                        <div class="col-6">
+                            <div class="row">
+
+                                <div class="col-6" style="padding-left: 0;">
+                                    <input type="number" class="form-control" asp-for="Price" placeholder="ICO Price">
+                                </div>
+                                <div class="col-6" style="padding-left: 0;">
+                                    <select class="form-control" asp-for="PriceCurrency">
+                                        <option>BTC</option>
+                                        <option>BCH</option>
+                                        <option>ETH</option>
+                                    </select>
+                                </div>
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="form-group">
                         <label asp-for="StartTime">Start Time</label>
                         <input class="form-control" type="date" asp-for="StartTime" />
                         <span asp-validation-for="StartTime" class="text-danger"></span>

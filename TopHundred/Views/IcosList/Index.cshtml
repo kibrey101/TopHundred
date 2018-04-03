@@ -21,8 +21,8 @@
             <tr style="font-size: 1.1em;">
                 <th>#</th>
                 <th>Description</th>
-
                 <th>Status</th>
+                <th>Price</th>
                 <th>Start</th>
                 <th>End</th>
                 <th class="text-center">Count</th>
@@ -41,6 +41,7 @@
             <td>@item.Description</td>
 
             <td style="color: #000080;">@item.Status</td>
+            <td>@item.Price @item.PriceCurrency</td>
             <td>@item.StartTime.ToString("MMM dd, yyyy")</td>
             <td >@item.EndTime.ToString("MMM dd, yyyy")</td>
             <td class="text-center">@item.TotalTokenCount.ToString("##,###") @item.Symbol</td>
