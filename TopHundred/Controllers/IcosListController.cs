@@ -15,7 +15,7 @@ namespace TopHundred.Controllers
     {
         private readonly IcoListContext _context;
         private SignInManager<Customer> _signInManager;
-        private UserManager<Customer> _userManager;
+        private readonly UserManager<Customer> _userManager;
         public IcosListController(IcoListContext context, SignInManager<Customer> signInManager, UserManager<Customer> userManager)
         {
             _context = context;
