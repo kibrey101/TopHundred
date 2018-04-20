@@ -46,6 +46,8 @@ namespace TopHundred.Entities
                     Id = Guid.NewGuid(),
                     Name = "Test ICO",
                     Description = "Test Description",
+                    Price = 11M,
+                    PriceCurrency = "ETH",
                     Symbol = "TTT",
                     Icon = "TTT",
                     Status = "Active",

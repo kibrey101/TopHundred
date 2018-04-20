@@ -15,6 +15,10 @@ namespace TopHundred.Entities
         public string Name { get; set; }
         [Required, MaxLength(500)]
         public string Description { get; set; }
+        [Required]
+        public decimal Price { get; set; }
+        [Required]
+        public string PriceCurrency{ get; set; }
         [Required, MaxLength(10)]
         public string Symbol { get; set; }
         [Required]
