@@ -45,6 +45,7 @@ namespace TopHundred.Entities
                 {
                     Id = Guid.NewGuid(),
                     Name = "Test ICO",
+                    Rank = 1,
                     Description = "Test Description",
                     Price = 11M,
                     PriceCurrency = "ETH",
@@ -74,29 +75,32 @@ namespace TopHundred.Entities
                         }
                     }
                 },
-                //new IcoItem
-                //{
-                //    Id = Guid.NewGuid(),
-                //    Name = "Ripple",
-                //    Description = "micro transactions",
-                //    Symbol = "XRP",
-                //    Icon = "XRP",
-                //    Status = "Active",
-                //    StartTime = DateTime.Today.AddDays(-5),
-                //    EndTime = DateTime.Today.AddDays(30),
-                //    WhitePaper = "emptyfile",
-                //    Customer = user,
-                //    TotalTokenCount = 7000000,
-                //    ListPosition =  new ListPosition
-                //    {
-                //        Id = Guid.NewGuid(),
-                //        PositionValue = 2,
-                //        PurchaseTime = DateTime.Now,
-                //        ExpiryTime = DateTime.Now.AddDays(12),
-                //        Status = ListPositionStatus.Taken,
-                //        Price = 12
-                //    }
-                //},
+                new IcoItem
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Ripple",
+                    Rank = 2,
+                    Description = "micro transactions",
+                    Price = 11M,
+                    PriceCurrency = "ETH",
+                    Symbol = "XRP",
+                    Icon = "XRP",
+                    Status = "Active",
+                    StartTime = DateTime.Today.AddDays(-5),
+                    EndTime = DateTime.Today.AddDays(30),
+                    WhitePaper = "emptyfile",
+                    Customer = user,
+                    TotalTokenCount = 7000000,
+                    ListPosition =  new ListPosition
+                    {
+                        Id = Guid.NewGuid(),
+                        PositionValue = 2,
+                        PurchaseTime = DateTime.Now,
+                        ExpiryTime = DateTime.Now.AddDays(12),
+                        Status = ListPositionStatus.Taken,
+                        Price = 12
+                    }
+                },
                 //new IcoItem
                 //{
                 //    Id = Guid.NewGuid(),

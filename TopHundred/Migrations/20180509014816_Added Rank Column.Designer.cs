@@ -11,9 +11,10 @@ using TopHundred.Entities;
 namespace TopHundred.Migrations
 {
     [DbContext(typeof(IcoListContext))]
-    partial class IcoListContextModelSnapshot : ModelSnapshot
+    [Migration("20180509014816_Added Rank Column")]
+    partial class AddedRankColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
